@@ -7,6 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class PlayerManager : MonoBehaviour
 {
+    [SerializeField] UIManager _uiManager;
     [SerializeField] PlayerMovementManager _playerMovementManager;
     [SerializeField] PlayerAnimatorManager _playerAnimatorManager;
     [SerializeField] PlayerStatsManager _playerStatsManager;
@@ -19,6 +20,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake()
     {
+        _uiManager = FindObjectOfType<UIManager>();
         _playerMovementManager = GetComponent<PlayerMovementManager>();
         _playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
         _playerStatsManager = GetComponent<PlayerStatsManager>();
@@ -28,20 +30,42 @@ public class PlayerManager : MonoBehaviour
 
     private void Update()
     {
-       HandleMovement();
-       HandleRotation();
-       HandleAttacking();
-        _isMoving = (GetMoveDirectionX() != 0 || GetMoveDirectionY() != 0) ? true : false;
-       _playerAnimatorManager.SetAnimatorBool("isMoving", _isMoving);
+        if(!IsDead())
+        {
+            HandleMovement();
+            HandleRotation();
+            HandleAttacking();
+            _isMoving = (GetMoveDirectionX() != 0 || GetMoveDirectionY() != 0) ? true : false;
+            _playerAnimatorManager.SetAnimatorBool("isMoving", _isMoving);
+        }
+
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            TakeDamage(0.5f);
+        }
+        
     }
 
-    public Animator GetAnimator()
+    #region PlayerStatsMaanger Methods
+    public void TakeDamage(float damage)
     {
-        return _anim;
+        if (IsDead())
+        {
+            return;
+        }
+        _playerStatsManager.TakeDamage(damage);
+        _uiManager.TakeDamage(damage);
     }
 
-    #region PlayerAnimatorManager Methods
+    public float GetMaxHealth()
+    {
+        return _playerStatsManager.GetMaxHealth();
+    }
 
+    public float GetCurrentHealth()
+    {
+        return _playerStatsManager.GetCurrentHealth();
+    }
     #endregion
 
     #region PlayerMovementManager Methods
@@ -71,4 +95,13 @@ public class PlayerManager : MonoBehaviour
         _playerCombatManager.HandleAttacking();
     }
 
+    public void SetIsDead(bool value)
+    {
+        _isDead = value;
+    }
+
+    public bool IsDead()
+    {
+        return _isDead;
+    }
 }
