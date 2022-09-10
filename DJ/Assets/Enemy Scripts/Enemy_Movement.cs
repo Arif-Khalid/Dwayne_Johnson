@@ -40,9 +40,13 @@ public class Enemy_Movement : MonoBehaviour
             enemyAnimator.SetBool("moving", true);
         } else {
             // set velocity to zero
-            enemyRigidbody.velocity = Vector2.zero;
-            enemyAnimator.SetBool("moving", false);
+            StopMoving();
         }
+    }
+    public void StopMoving() {
+        // this will stop all movement for the enemy
+        enemyRigidbody.velocity = Vector2.zero;
+        enemyAnimator.SetBool("moving", false);
     }
 }
 
