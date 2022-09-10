@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Enemy_Movement : MonoBehaviour
 {
@@ -11,12 +12,14 @@ public class Enemy_Movement : MonoBehaviour
     Animator enemyAnimator;
     SpriteRenderer spriteRenderer;
     float distanceAway;
+    Vector3 dir;
+    [SerializeField] AIPath aiPath;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        enemyRigidbody = gameObject.GetComponent<Rigidbody2D>();
+        //player = GameObject.FindGameObjectWithTag("Player");
+        //enemyRigidbody = gameObject.GetComponent<Rigidbody2D>();
         enemyAnimator = gameObject.GetComponent<Animator>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
@@ -24,24 +27,16 @@ public class Enemy_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distanceAway = Vector3.Distance(player.transform.position, enemyRigidbody.position);
-        
-        // moving when within a range
-        if (distanceAway < enemyViewRange && distanceAway > 0.5) {
-            // moving towards the left
-            if (enemyRigidbody.velocity.x < 0) {
-                spriteRenderer.flipX = true;
-            } else {
-                spriteRenderer.flipX = false;
-            }
-
-            // apply velocity to enemy
-            enemyRigidbody.velocity = speed * ((Vector2)player.transform.position - enemyRigidbody.position).normalized;
-            enemyAnimator.SetBool("moving", true);
-        } else {
-            // set velocity to zero
-            StopMoving();
+        dir = aiPath.destination - transform.position;
+        if (dir.x > 0)
+        {
+            transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
         }
+        else if (dir.x < 0)
+        {
+            transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+        }
+        enemyAnimator.SetFloat("Speed", aiPath.velocity.magnitude);
     }
     public void StopMoving() {
         // this will stop all movement for the enemy
