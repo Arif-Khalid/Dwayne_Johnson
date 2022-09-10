@@ -58,6 +58,10 @@
   <ItemGroup>
     <Compile Include="Assets\ArifScripts\GameManager.cs" />
     <Compile Include="Assets\ArifScripts\EnemyFireBall.cs" />
+    <Compile Include="Assets\Script\PlayerTest.cs" />
+    <Compile Include="Assets\Script\CameraFollow.cs" />
+    <Compile Include="Assets\Enemy Scripts\Enemy_Movement.cs" />
+    <Compile Include="Assets\ArifScripts\AiMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
