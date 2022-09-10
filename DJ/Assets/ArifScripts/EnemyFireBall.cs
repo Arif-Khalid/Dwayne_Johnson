@@ -7,6 +7,7 @@ public class EnemyFireBall : MonoBehaviour
     [SerializeField] Rigidbody2D _rb;
     [SerializeField] float speed;
     [SerializeField] float timeAlive;
+    [SerializeField] float damage;
 
     private void Start()
     {
@@ -14,11 +15,13 @@ public class EnemyFireBall : MonoBehaviour
         StartCoroutine(deathTimer());
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Player")
         {
+            Debug.Log("Hit Player");
             //Deal Damage to player ...other.gameObject.GetComponent<>
+            other.gameObject.GetComponent<PlayerManager>().TakeDamage(damage);
         }
         Destroy(this.gameObject);
     }

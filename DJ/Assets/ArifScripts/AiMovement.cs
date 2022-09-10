@@ -49,6 +49,11 @@ public class AiMovement : MonoBehaviour
         animator.SetFloat("Speed", aiPath.velocity.magnitude);
     }
 
+    public void StopMoving()
+    {
+        aiPath.maxSpeed = 0;
+    }
+
     private void Shoot()
     {
         Instantiate<GameObject>(fireBall, firePoint.position, Quaternion.LookRotation(Vector3.forward,dir));

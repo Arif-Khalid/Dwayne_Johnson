@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    public int attackDamage = 1;
+    public float attackDamage = 1f;
     public float attackInterval = 1;
     IEnumerator ieObject;
+    PlayerManager playerManager;
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         // if collision with player
         if (other.gameObject.tag == "Player")
         {
+            playerManager = other.gameObject.GetComponent<PlayerManager>();
             // Debug.Log("collision with player");
             ieObject = Attack();
             StartCoroutine(ieObject);
@@ -52,6 +54,7 @@ public class EnemyAttack : MonoBehaviour
     IEnumerator Attack() {
         while (attackInterval != 0) {
             // attack function call
+            playerManager.TakeDamage(attackDamage);
             Debug.Log("attacking player");
             yield return new WaitForSeconds(attackInterval);
         }

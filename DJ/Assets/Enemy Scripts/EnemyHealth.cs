@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
     int previousHealth;
     BoxCollider2D enemyCollider;
     Enemy_Movement enemy_Movement;
+    AiMovement aiMovement;
     Animator enemyAnimator;
     SpriteRenderer enemySpriteRenderer;
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class EnemyHealth : MonoBehaviour
         enemyAnimator = GetComponent<Animator>();
         enemyCollider = GetComponent<BoxCollider2D>();
         enemy_Movement = GetComponent<Enemy_Movement>();
+        aiMovement = GetComponent<AiMovement>();
         enemySpriteRenderer = GetComponent<SpriteRenderer>();
 
         previousHealth = health;
@@ -43,8 +45,9 @@ public class EnemyHealth : MonoBehaviour
             // dies
             dead = true;
             enemyAnimator.SetBool("dead", true);
-            enemy_Movement.StopMoving();
-            enemy_Movement.enabled = false;
+            if (enemy_Movement) { enemy_Movement.StopMoving(); enemy_Movement.enabled = false; }
+            else { aiMovement.StopMoving(); aiMovement.enabled = false; }
+            
             enemyCollider.enabled = false;
 
             StartCoroutine(Fade());

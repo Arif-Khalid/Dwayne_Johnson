@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 1216635392}
   - component: {fileID: 1216635393}
   - component: {fileID: 1216635394}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DemonPrefab
   m_TagString: Enemy
   m_Icon: {fileID: 0}

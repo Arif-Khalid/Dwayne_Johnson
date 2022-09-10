@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -2437,13 +2437,12 @@ TextureImporter:
       tundra__63: 759158220
       tundra__28: 1303494082
       tundra__33: 2464256
-      tundra__71: 33263002
       tundra__104: 1748329667
-      tundra__102: 1087358448
+      tundra__71: 33263002
       tundra__7: 2078391114
       tundra__61: 1215226169
+      tundra__102: 1087358448
       tundra__36: 1488617406
-      tundra__57: -144824309
       tundra__80: -1069960935
       tundra__42: -1624226756
       tundra__12: 265849352
@@ -2451,6 +2450,7 @@ TextureImporter:
       tundra__64: -1370061910
       tundra__94: -23430095
       tundra__93: -1277986542
+      tundra__57: -144824309
       tundra__53: -1773412893
       tundra__77: 370326806
       tundra__9: -1338613164

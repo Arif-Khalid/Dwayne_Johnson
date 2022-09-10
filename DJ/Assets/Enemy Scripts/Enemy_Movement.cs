@@ -39,9 +39,7 @@ public class Enemy_Movement : MonoBehaviour
         enemyAnimator.SetFloat("Speed", aiPath.velocity.magnitude);
     }
     public void StopMoving() {
-        // this will stop all movement for the enemy
-        enemyRigidbody.velocity = Vector2.zero;
-        enemyAnimator.SetBool("moving", false);
+        aiPath.maxSpeed = 0;
     }
 }
 
