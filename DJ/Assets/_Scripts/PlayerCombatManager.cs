@@ -6,25 +6,25 @@ public class PlayerCombatManager : MonoBehaviour
 {
     [SerializeField] PlayerManager _playerManager;
     [SerializeField] Transform _playerHand;
-    [SerializeField] WeaponItem _weaponItem;
+    [SerializeField] WeaponItem _currentWeaponItem;
     
     private void Awake()
     {
         _playerManager = GetComponent<PlayerManager>();
     }
 
-    public void LoadWeaponInHand()
+    public void LoadCurrentWeapon()
     {
-        
+        Instantiate(_currentWeaponItem, _playerHand);
     }
 
     public void HandleAttacking()
     {
         if(Input.GetKeyDown(KeyCode.C))
         {
-            if(_weaponItem != null && _weaponItem.GetAttackBool() == false)
-            { 
-                _weaponItem.SetAttackBool(true);
+            if(_currentWeaponItem != null && _currentWeaponItem.GetAttackBool() == false)
+            {
+                _currentWeaponItem.SetAttackBool(true);
             }
         }
     }

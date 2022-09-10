@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//[CreateAssetMenu(menuName = "Items/Weapon Item")]
 public class WeaponItem : MonoBehaviour
 {
+    public GameObject modelPrefab;
     [SerializeField] string _weaponName;
     //[SerializeField] GameObject _weaponModel;
     [SerializeField] BoxCollider2D _damageCollider;

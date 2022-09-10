@@ -58,7 +58,6 @@
   <ItemGroup>
     <Compile Include="Assets/_Scripts/PlayerCombatManager.cs" />
     <Compile Include="Assets/_Scripts/PlayerMovementManager.cs" />
-    <Compile Include="Assets/_Scripts/NewBehaviourScript.cs" />
     <Compile Include="Assets/_Scripts/PlayerAnimatorManager.cs" />
     <Compile Include="Assets/_Scripts/ResetWeaponAnimatorBool.cs" />
     <Compile Include="Assets/_Scripts/PlayerStatsManager.cs" />
@@ -68,6 +67,8 @@
     <Compile Include="Assets/ArifScripts/GameManager.cs" />
     <Compile Include="Assets/_Scripts/UIManager.cs" />
     <Compile Include="Assets/_Scripts/PlayerHealthBar.cs" />
+    <Compile Include="Assets/_Scripts/Item.cs" />
+    <Compile Include="Assets/_Scripts/WeaponHolderSlot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
