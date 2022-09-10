@@ -22,8 +22,8 @@ public class PlayerCombatManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.C))
         {
-            if(_weaponItem != null)
-            {
+            if(_weaponItem != null && _weaponItem.GetAttackBool() == false)
+            { 
                 _weaponItem.SetAttackBool(true);
             }
         }

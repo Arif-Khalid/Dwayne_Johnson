@@ -48,4 +48,9 @@ public class WeaponItem : MonoBehaviour
     {
         attack = value;
     }
+
+    public bool GetAttackBool()
+    {
+        return attack;
+    }
 }

@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 1899294581}
   - component: {fileID: 1899294582}
   - component: {fileID: 1899294583}
+  - component: {fileID: 1899294584}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -431,6 +432,24 @@ MonoBehaviour:
   _playerManager: {fileID: 0}
   _playerHand: {fileID: 2100153436}
   _weaponItem: {fileID: 910861470554673356}
+--- !u!114 &1899294584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899294574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ea1f37ba638840b081107cb23683d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerManager: {fileID: 0}
+  _playerHealth: 10
+  _playerStamina: 10
+  _playerMana: 10
+  _hurtModels:
+  - {fileID: 1763699019, guid: 0da67e7273d12b840b8dd1b5c5bd24ac, type: 3}
 --- !u!1 &2100153435
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,6 +492,10 @@ PrefabInstance:
     - target: {fileID: 2746571449048687340, guid: 5e1922597e2ae4c6580d19786e38c45a, type: 3}
       propertyPath: m_Name
       value: Player Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926151551533400120, guid: 5e1922597e2ae4c6580d19786e38c45a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9014663471767552785, guid: 5e1922597e2ae4c6580d19786e38c45a, type: 3}
       propertyPath: m_RootOrder
