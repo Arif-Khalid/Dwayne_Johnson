@@ -2496,6 +2496,12 @@ MonoBehaviour:
     loop: 0
     pitch: 1
     name: PlayerAttack
+  - clip: {fileID: 8300000, guid: 99695aadf15e97b4689e6787a922c0b2, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+    pitch: 1
+    name: Win
 --- !u!1 &1420609021
 GameObject:
   m_ObjectHideFlags: 0

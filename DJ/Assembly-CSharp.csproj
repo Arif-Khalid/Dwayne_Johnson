@@ -57,12 +57,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Scripts\PlayerCombatManager.cs" />
+    <Compile Include="Assets\ArifScripts\Sound.cs" />
     <Compile Include="Assets\_Scripts\PlayerMovementManager.cs" />
     <Compile Include="Assets\_Scripts\WeaponHolderSlot.cs" />
     <Compile Include="Assets\Enemy Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\_Scripts\PlayerAnimatorManager.cs" />
     <Compile Include="Assets\ArifScripts\AiMovement.cs" />
+    <Compile Include="Assets\ArifScripts\CreditMenu.cs" />
     <Compile Include="Assets\ArifScripts\GameManager.cs" />
+    <Compile Include="Assets\ArifScripts\AudioManager.cs" />
     <Compile Include="Assets\_Scripts\UIManager.cs" />
     <Compile Include="Assets\_Scripts\ResetWeaponAnimatorBool.cs" />
     <Compile Include="Assets\_Scripts\PlayerStatsManager.cs" />
@@ -77,9 +80,6 @@
     <Compile Include="Assets\Enemy Scripts\Enemy_Movement.cs" />
     <Compile Include="Assets\_Scripts\WeaponItem.cs" />
     <Compile Include="Assets\_Scripts\PlayerManager.cs" />
-    <Compile Include="Assets\ArifScripts\CreditMenu.cs" />
-    <Compile Include="Assets\ArifScripts\AudioManager.cs" />
-    <Compile Include="Assets\ArifScripts\Sound.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay 2.shader" />
@@ -94,6 +94,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay 2.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\gemini_moon\Read This.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile 2.cginc" />
     <None Include="Assets\CaveSprites\caveSprites_\- READ ME -.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />

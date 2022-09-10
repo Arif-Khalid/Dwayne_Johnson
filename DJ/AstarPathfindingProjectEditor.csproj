@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{BEBE99BD-80E3-8938-40DF-B98D129E8162}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -56,6 +57,12 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ArifScripts\AiMovement.cs" />
+    <Compile Include="Assets\ArifScripts\AudioManager.cs" />
+    <Compile Include="Assets\ArifScripts\CreditMenu.cs" />
+    <Compile Include="Assets\ArifScripts\EnemyFireBall.cs" />
+    <Compile Include="Assets\ArifScripts\GameManager.cs" />
+    <Compile Include="Assets\ArifScripts\Sound.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Editor\SeekerEditor.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Editor\AILerpEditor.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Editor\GraphEditors\GridGeneratorEditor.cs" />
@@ -74,12 +81,62 @@
     <Compile Include="Assets\AstarPathfindingProject\Editor\Legacy\LegacyEditorHelper2.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Editor\AstarPathEditor.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Editor\AstarUpdateChecker.cs" />
+    <Compile Include="Assets\Script\CameraFollow.cs" />
+    <Compile Include="Assets\Script\Interaction.cs" />
+    <Compile Include="Assets\Script\PlayerTest.cs" />
+    <Compile Include="Assets\_Scripts\Item.cs" />
+    <Compile Include="Assets\_Scripts\PlayerAnimatorManager.cs" />
+    <Compile Include="Assets\_Scripts\PlayerCombatManager.cs" />
+    <Compile Include="Assets\_Scripts\PlayerHealthBar.cs" />
+    <Compile Include="Assets\_Scripts\PlayerManager.cs" />
+    <Compile Include="Assets\_Scripts\PlayerMovementManager.cs" />
+    <Compile Include="Assets\_Scripts\PlayerStatsManager.cs" />
+    <Compile Include="Assets\_Scripts\ResetAnimatorBool.cs" />
+    <Compile Include="Assets\_Scripts\ResetWeaponAnimatorBool.cs" />
+    <Compile Include="Assets\_Scripts\UIManager.cs" />
+    <Compile Include="Assets\_Scripts\WeaponHolderSlot.cs" />
+    <Compile Include="Assets\_Scripts\WeaponItem.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\ArifScripts\AiMovement.cs.meta" />
+    <None Include="Assets\ArifScripts\AudioManager.cs.meta" />
+    <None Include="Assets\ArifScripts\CreditMenu.cs.meta" />
+    <None Include="Assets\ArifScripts\DragonDie.anim" />
+    <None Include="Assets\ArifScripts\DragonDie.anim.meta" />
+    <None Include="Assets\ArifScripts\DragonEnemy.controller" />
+    <None Include="Assets\ArifScripts\DragonEnemy.controller.meta" />
+    <None Include="Assets\ArifScripts\DragonHurt.anim" />
+    <None Include="Assets\ArifScripts\DragonHurt.anim.meta" />
+    <None Include="Assets\ArifScripts\DragonIdle.anim" />
+    <None Include="Assets\ArifScripts\DragonIdle.anim.meta" />
+    <None Include="Assets\ArifScripts\DragonWalk.anim" />
+    <None Include="Assets\ArifScripts\DragonWalk.anim.meta" />
+    <None Include="Assets\ArifScripts\EnemyFireBall.cs.meta" />
+    <None Include="Assets\ArifScripts\FireBallController.controller" />
+    <None Include="Assets\ArifScripts\FireBallController.controller.meta" />
+    <None Include="Assets\ArifScripts\FireBallIdle.anim" />
+    <None Include="Assets\ArifScripts\FireBallIdle.anim.meta" />
+    <None Include="Assets\ArifScripts\GameManager.cs.meta" />
+    <None Include="Assets\ArifScripts\Sound.cs.meta" />
     <None Include="Assets\AstarPathfindingProject\Editor\AstarPathfindingProjectEditor.asmdef" />
     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.cginc" />
     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\NavmeshOutline.shader" />
     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader" />
+    <None Include="Assets\Script\CameraFollow.cs.meta" />
+    <None Include="Assets\Script\Interaction.cs.meta" />
+    <None Include="Assets\Script\PlayerTest.cs.meta" />
+    <None Include="Assets\_Scripts\Item.cs.meta" />
+    <None Include="Assets\_Scripts\PlayerAnimatorManager.cs.meta" />
+    <None Include="Assets\_Scripts\PlayerCombatManager.cs.meta" />
+    <None Include="Assets\_Scripts\PlayerHealthBar.cs.meta" />
+    <None Include="Assets\_Scripts\PlayerManager.cs.meta" />
+    <None Include="Assets\_Scripts\PlayerMovementManager.cs.meta" />
+    <None Include="Assets\_Scripts\PlayerStatsManager.cs.meta" />
+    <None Include="Assets\_Scripts\ResetAnimatorBool.cs.meta" />
+    <None Include="Assets\_Scripts\ResetWeaponAnimatorBool.cs.meta" />
+    <None Include="Assets\_Scripts\UIManager.cs.meta" />
+    <None Include="Assets\_Scripts\WeaponHolderSlot.cs.meta" />
+    <None Include="Assets\_Scripts\WeaponItem.cs.meta" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -780,6 +837,7 @@
       <Name>PackageToolsEditor</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

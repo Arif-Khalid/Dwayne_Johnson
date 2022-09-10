@@ -10,6 +10,7 @@ public class Interaction : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Finish"))
         {
+            AudioManager.instance.Play("Win");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             Debug.Log("Stage Completed! Loading next stage");
         }
