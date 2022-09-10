@@ -9,8 +9,9 @@ public class WeaponItem : MonoBehaviour
     [SerializeField] string _weaponName;
     //[SerializeField] GameObject _weaponModel;
     [SerializeField] BoxCollider2D _damageCollider;
-    [SerializeField] bool attack = false;
+    [SerializeField] bool attack;
     [SerializeField] Animator _anim;
+    public int damage = 5;
 
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class WeaponItem : MonoBehaviour
         {
             _damageCollider.enabled = false;
         }
+        attack = false;
     }
     private void Update()
     {
@@ -32,7 +34,12 @@ public class WeaponItem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        EnemyHealth enemy = collision.GetComponent<EnemyHealth>();
+        if(enemy!= null)
+        {
+            enemy.TakeDamage(damage);
 
+        }
     }
 
     public void EnableDamageCollider()

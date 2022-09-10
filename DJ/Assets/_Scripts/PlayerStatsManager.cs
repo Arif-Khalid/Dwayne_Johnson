@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerStatsManager : MonoBehaviour
 {
@@ -27,6 +29,7 @@ public class PlayerStatsManager : MonoBehaviour
         if(_playerHealth <= 0)
         {
             _playerManager.SetIsDead(true);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

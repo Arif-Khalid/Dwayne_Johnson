@@ -43,11 +43,12 @@ public class PlayerManager : MonoBehaviour
         {
             TakeDamage(0.5f);
         }
-
+        /*
         if(Input.GetKeyDown(KeyCode.R))
         {
             _playerCombatManager.LoadCurrentWeapon();
         }
+        */
         
     }
 
