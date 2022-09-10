@@ -2960,7 +2960,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &788780530
 Transform:
   m_ObjectHideFlags: 0
@@ -3093,14 +3093,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2021620922}
-    - target: {fileID: 5149403121949744290, guid: 1c89e9e0434f40840a6313fd5f44debc, type: 3}
-      propertyPath: slowdownDistance
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5149403121949744290, guid: 1c89e9e0434f40840a6313fd5f44debc, type: 3}
-      propertyPath: endReachedDistance
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5149403121949744294, guid: 1c89e9e0434f40840a6313fd5f44debc, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3149,8 +3141,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: dragon__0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5149403121949744288, guid: 1c89e9e0434f40840a6313fd5f44debc, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c89e9e0434f40840a6313fd5f44debc, type: 3}
 --- !u!4 &853991956 stripped
 Transform:
@@ -4959,37 +4950,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7556957296236875741, guid: 98b74dcebc6147b468342f289c5e0088, type: 3}
   m_PrefabInstance: {fileID: 1333901663}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1374795052 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5149403121949744351, guid: 1c89e9e0434f40840a6313fd5f44debc, type: 3}
-  m_PrefabInstance: {fileID: 843293718}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1374795061
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374795052}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.008778416}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.24, y: 0.24}
-    newSize: {x: 0.24, y: 0.24}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.13428444, y: 0.15367879}
-  m_EdgeRadius: 0
 --- !u!1001 &1432774980
 PrefabInstance:
   m_ObjectHideFlags: 0

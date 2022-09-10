@@ -51,7 +51,8 @@ public class AiMovement : MonoBehaviour
 
     public void StopMoving()
     {
-        aiPath.maxSpeed = 0;
+        //aiPath.maxSpeed = 0;
+        aiPath.enabled = false;
     }
 
     private void Shoot()

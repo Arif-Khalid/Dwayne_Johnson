@@ -39,7 +39,8 @@ public class Enemy_Movement : MonoBehaviour
         enemyAnimator.SetFloat("Speed", aiPath.velocity.magnitude);
     }
     public void StopMoving() {
-        aiPath.maxSpeed = 0;
+        //aiPath.maxSpeed = 0;
+        aiPath.enabled = false;
     }
 }
 

@@ -12,6 +12,7 @@ public class WeaponItem : MonoBehaviour
     [SerializeField] bool attack;
     [SerializeField] Animator _anim;
     public int damage = 5;
+    List<EnemyHealth> enemyHealths = new List<EnemyHealth>();
 
     private void Awake()
     {
@@ -37,13 +38,15 @@ public class WeaponItem : MonoBehaviour
         EnemyHealth enemy = collision.GetComponent<EnemyHealth>();
         if(enemy!= null)
         {
+            if (enemyHealths.Contains(enemy)) { return; }
+            enemyHealths.Add(enemy);
             enemy.TakeDamage(damage);
-
         }
     }
 
     public void EnableDamageCollider()
     {
+        enemyHealths.Clear();
         _damageCollider.enabled = true;
     }
 

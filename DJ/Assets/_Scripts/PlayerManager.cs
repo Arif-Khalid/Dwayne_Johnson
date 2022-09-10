@@ -13,7 +13,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] PlayerStatsManager _playerStatsManager;
     [SerializeField] PlayerCombatManager _playerCombatManager;
     [SerializeField] Animator _anim;
-
+    [SerializeField] SpriteRenderer _spriteRenderer; 
     [Header("Character Booleans")]
     [SerializeField] bool _isDead;
     [SerializeField] bool _isMoving;
@@ -26,6 +26,7 @@ public class PlayerManager : MonoBehaviour
         _playerStatsManager = GetComponent<PlayerStatsManager>();
         _playerCombatManager = GetComponent<PlayerCombatManager>();
         _anim = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -60,7 +61,22 @@ public class PlayerManager : MonoBehaviour
             return;
         }
         _playerStatsManager.TakeDamage(damage);
+        StartCoroutine(DamageColor());
         _uiManager.TakeDamage(damage);
+    }
+
+    IEnumerator DamageColor()
+    {
+        for (float t = 0; t <= 1; t += 0.1f)
+        {
+            _spriteRenderer.color = Color.Lerp(Color.white, Color.red, t);
+            yield return new WaitForSeconds(0.02f);
+        }
+        for (float t = 0; t <= 1; t += 0.1f)
+        {
+            _spriteRenderer.color = Color.Lerp(Color.red, Color.white, t);
+            yield return new WaitForSeconds(0.02f);
+        }
     }
 
     public float GetMaxHealth()
