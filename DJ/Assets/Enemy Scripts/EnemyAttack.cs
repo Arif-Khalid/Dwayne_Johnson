@@ -5,38 +5,34 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public int attackDamage = 1;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float attackInterval = 1;
+    IEnumerator ieObject;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnCollisionEnter(Collision collision) 
+    void OnTriggerEnter2D(Collider2D other) 
     {
         // if collision with player
-        if (collision.gameObject.tag == "Player") {
-            Debug.Log("collision with player");
-            
+        if (other.gameObject.tag == "Player") {
+            // Debug.Log("collision with player");
+            ieObject = Attack();
+            StartCoroutine(ieObject);
             // add take damage to player
         }
-        Debug.Log("test");
     }
-    void OnCollisionExit(Collision collision) 
+    void OnTriggerExit2D(Collider2D other) 
     {
         // if no more collision with player
-        if (collision.gameObject.tag == "Player") {
-            Debug.Log("no collision with player");
-            
+        if (other.gameObject.tag == "Player") {
+            // Debug.Log("no collision with player");
+            StopCoroutine(ieObject);
             // stop take damage to player
         }
-        Debug.Log("test");
+    }
+    IEnumerator Attack() {
+        while (attackInterval != 0) {
+            // attack function call
+            Debug.Log("attacking player");
+            yield return new WaitForSeconds(attackInterval);
+        }
     }
     
 }

@@ -39,7 +39,7 @@ public class EnemyHealth : MonoBehaviour
             enemySpriteRenderer.color =  Color.Lerp(Color.white, Color.red, t);
             yield return new WaitForSeconds(0.1f);
         }
-        for (float t = 0; t <= 1; t += 0.03f) {
+        for (float t = 0; t <= 1; t += 0.01f) {
             enemySpriteRenderer.color =  Color.Lerp(Color.red, Color.clear, t);
             yield return new WaitForSeconds(0.1f);
         }
