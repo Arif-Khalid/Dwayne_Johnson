@@ -6,7 +6,7 @@ public class PlayerAnimatorManager : MonoBehaviour
 {
     [SerializeField] PlayerManager _playerManager;
     [SerializeField] Animator _anim;
-    [SerializeField] bool _isMoving;
+
     private void Awake()
     {
         _playerManager = GetComponent<PlayerManager>();
@@ -15,14 +15,16 @@ public class PlayerAnimatorManager : MonoBehaviour
 
     private void Update()
     {
-        float _moveDirectionX = _playerManager.GetMoveDirectionX();
-        float _moveDirectionY = _playerManager.GetMoveDirectionY();
-        _isMoving = (_moveDirectionX != 0 || _moveDirectionY != 0) ? true : false;
-
-        _anim.SetBool("isMoving", _isMoving);
 
     }
 
+    public void SetAnimatorBool(string boolName, bool value)
+    {
+        _anim.SetBool(boolName, value);
+    }
 
-
+    public void PlayTargetAnimation(string targetAnim)
+    {
+        _anim.Play(targetAnim);
+    }
 }
