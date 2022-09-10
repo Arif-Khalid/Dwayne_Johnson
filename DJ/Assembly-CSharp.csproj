@@ -69,32 +69,57 @@
     <Compile Include="Assets/_Scripts/PlayerHealthBar.cs" />
     <Compile Include="Assets/_Scripts/Item.cs" />
     <Compile Include="Assets/_Scripts/WeaponHolderSlot.cs" />
+    <Compile Include="Assets/Script/PlayerTest.cs" />
+    <Compile Include="Assets/Script/CameraFollow.cs" />
+    <Compile Include="Assets/Enemy Scripts/Enemy_Movement.cs" />
+    <Compile Include="Assets/Script/Interaction.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay 2.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD 2.shader" />
+    <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution 2.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
     <None Include="Assets/PlayerSprites/playerSprites_ [version 1.0]/- READ ME -.txt" />
     <None Include="Assets/Camelot/camelot_ [version 1.0]/- READ ME -.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking 2.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay 2.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile 2.cginc" />
     <None Include="Assets/CaveSprites/caveSprites_/- READ ME -.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets/Tundra/tundra_ [version 1.0]/- READ ME -.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas 2.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF 2.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile 2.shader" />
+    <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters 2.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
     <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile 2.shader" />
     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
     <None Include="Assets/DesertSprites/desertSprites_ [version 1.0]/- READ ME -.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite 2.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro 2.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface 2.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD 2.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties 2.cginc" />
     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
+    <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters 2.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile 2.shader" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap 2.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL 2.txt" />
     <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
+    <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface 2.cginc" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
   </ItemGroup>
@@ -921,6 +946,18 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{70E82CD9-7B72-EAF7-EC36-9270AD547CC2}</Project>
       <Name>Unity.VisualScripting.State</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Sysroot.Linux_x86_64.csproj">
+      <Project>{0996BFE9-DF80-3675-B6E0-A131E11B96D0}</Project>
+      <Name>Unity.Sysroot.Linux_x86_64</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Toolchain.Macos-x86_64-Linux-x86_64.csproj">
+      <Project>{82AF3B9B-7DBE-A05F-2D66-126DB2EB3673}</Project>
+      <Name>Unity.Toolchain.Macos-x86_64-Linux-x86_64</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.SysrootPackage.Editor.csproj">
+      <Project>{6F933BCB-CB5F-7B74-475A-660FF93BB38D}</Project>
+      <Name>Unity.SysrootPackage.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
