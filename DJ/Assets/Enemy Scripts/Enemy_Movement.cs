@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class Enemy_Movement : MonoBehaviour
 {
-    public GameObject player;
+    GameObject player;
     public float speed = 1;
     public float enemyViewRange = 10;
     Rigidbody2D enemyRigidbody;
     Animator enemyAnimator;
     SpriteRenderer spriteRenderer;
+    float distanceAway;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         enemyRigidbody = gameObject.GetComponent<Rigidbody2D>();
         enemyAnimator = gameObject.GetComponent<Animator>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -22,7 +24,10 @@ public class Enemy_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(player.transform.position, enemyRigidbody.position) < enemyViewRange) {
+        distanceAway = Vector3.Distance(player.transform.position, enemyRigidbody.position);
+        
+        // moving when within a range
+        if (distanceAway < enemyViewRange && distanceAway > 0.5) {
             // moving towards the left
             if (enemyRigidbody.velocity.x < 0) {
                 spriteRenderer.flipX = true;
@@ -35,7 +40,7 @@ public class Enemy_Movement : MonoBehaviour
             enemyAnimator.SetBool("moving", true);
         } else {
             // set velocity to zero
-            enemyRigidbody.velocity = new Vector2(0, 0);
+            enemyRigidbody.velocity = Vector2.zero;
             enemyAnimator.SetBool("moving", false);
         }
     }

@@ -44,10 +44,6 @@ public class EnemyHealth : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         // either this or reinstantiate the enemy with prefab
-        dead = false;
-        enemyAnimator.SetBool("dead", false);
-        enemy_Movement.enabled = true;
-        enemyCollider.enabled = true;
         gameObject.SetActive(false);
     }
     
