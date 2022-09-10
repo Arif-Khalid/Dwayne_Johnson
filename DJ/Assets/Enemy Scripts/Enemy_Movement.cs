@@ -8,19 +8,35 @@ public class Enemy_Movement : MonoBehaviour
     public float speed = 1;
     public float enemyViewRange = 10;
     Rigidbody2D enemyRigidbody;
+    Animator enemyAnimator;
+    SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
         enemyRigidbody = gameObject.GetComponent<Rigidbody2D>();
+        enemyAnimator = gameObject.GetComponent<Animator>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
         if (Vector3.Distance(player.transform.position, enemyRigidbody.position) < enemyViewRange) {
+            // moving towards the left
+            if (enemyRigidbody.velocity.x < 0) {
+                spriteRenderer.flipX = true;
+            } else {
+                spriteRenderer.flipX = false;
+            }
+
+            // apply velocity to enemy
             enemyRigidbody.velocity = speed * ((Vector2)player.transform.position - enemyRigidbody.position).normalized;
+            enemyAnimator.SetBool("moving", true);
+        } else {
+            // set velocity to zero
+            enemyRigidbody.velocity = new Vector2(0, 0);
+            enemyAnimator.SetBool("moving", false);
         }
     }
 }
