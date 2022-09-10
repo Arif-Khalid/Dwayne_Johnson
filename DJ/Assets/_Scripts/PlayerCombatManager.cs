@@ -25,8 +25,10 @@ public class PlayerCombatManager : MonoBehaviour
             if(_currentWeaponItem != null && _currentWeaponItem.GetAttackBool() == false)
             {
                 _currentWeaponItem.SetAttackBool(true);
+                AudioManager.instance.Play("PlayerAttack");
             }
         }
+        
     }
 
 }

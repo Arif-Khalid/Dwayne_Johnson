@@ -78,6 +78,8 @@
     <Compile Include="Assets\_Scripts\WeaponItem.cs" />
     <Compile Include="Assets\_Scripts\PlayerManager.cs" />
     <Compile Include="Assets\ArifScripts\CreditMenu.cs" />
+    <Compile Include="Assets\ArifScripts\AudioManager.cs" />
+    <Compile Include="Assets\ArifScripts\Sound.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay 2.shader" />

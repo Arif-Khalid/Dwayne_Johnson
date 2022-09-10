@@ -63,6 +63,7 @@ public class PlayerManager : MonoBehaviour
         _playerStatsManager.TakeDamage(damage);
         StartCoroutine(DamageColor());
         _uiManager.TakeDamage(damage);
+        AudioManager.instance.Play("PlayerHurt");
     }
 
     IEnumerator DamageColor()
@@ -115,6 +116,7 @@ public class PlayerManager : MonoBehaviour
     private void HandleAttacking()
     {
         _playerCombatManager.HandleAttacking();
+
     }
 
     public void SetIsDead(bool value)

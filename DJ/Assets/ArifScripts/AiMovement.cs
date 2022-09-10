@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using Pathfinding;
 
 public class AiMovement : MonoBehaviour
@@ -12,6 +13,7 @@ public class AiMovement : MonoBehaviour
     [SerializeField] GameObject fireBall;
     [SerializeField] float timeBetweenShots;
     [SerializeField] Animator animator;
+    [SerializeField] AudioSource audioSource;
     Vector3 dir;
     bool shot = false;
 
@@ -57,6 +59,7 @@ public class AiMovement : MonoBehaviour
 
     private void Shoot()
     {
+        audioSource.Play();
         Instantiate<GameObject>(fireBall, firePoint.position, Quaternion.LookRotation(Vector3.forward,dir));
         shot = true;
         Invoke(nameof(resetShoot), timeBetweenShots);
