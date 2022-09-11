@@ -7,8 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManagerInstance;
 
-    [SerializeField] Canvas mainMenu;
-    [SerializeField] Canvas optionsMenu;
+    
     private void Start()
     {
         if (gameManagerInstance)
@@ -25,18 +24,6 @@ public class GameManager : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene(1);
-    }
-
-    public void EnableOptionsMenu()
-    {
-        mainMenu.enabled = false;
-        optionsMenu.enabled = true;
-    }
-
-    public void DisableOptionsMenu()
-    {
-        optionsMenu.enabled = false;
-        mainMenu.enabled = true;
     }
 
     public void QuitGame()
