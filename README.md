@@ -1,14 +1,11 @@
 # King's Massacre
 
-A game made in a Game Jam for NUSGDG: Week 5 Game Jam
-- https://itch.io/jam/week-5-jam
+The king has had enough so he has decided to take it to the monsters.\
+Play as the king himself and fight 3 unique monsters in a short level made in under 9 hours
+***
+A game made in a Game Jam for [NUSGDG: Week 5 Game Jam](https://itch.io/jam/week-5-jam)
 
 # Credits:
-## Created by: 
-* Arif 
-* Jeremiah 
-* Titus
-* Li Yuan
 ## Art: 
 * [AnalogStudios_](https://analogstudios.itch.io/)
 * [blackdragon1727](https://blackdragon1727.itch.io/fire-pixel-bullet-16x16)
